@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <div>
-       <h1>EduWheel ! </h1>
+       <h1>EduWheel project </h1>
       </div>
     </>
   )
