@@ -1,35 +1,31 @@
+// src/App.jsx
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import { AuthProvider } from "./context/AuthContext";
 import AdminDashboard from "./pages/Dashboard/AdminDashboard";
-// import TeacherDashboard from "./pages/Dashboard/TeacherDashboard";
-// import StudentDashboard from "./pages/Dashboard/StudentDashboard";
+import Location from "./pages/Location";
+import DashboardLayout from "./Layouts/DashboardLayout";
 
 function App() {
-<<<<<<< HEAD
   return (
     <AuthProvider>
       <BrowserRouter>
         <Routes>
+          {/* Public Route */}
           <Route path="/" element={<Login />} />
-          <Route path="/dashboard/admin" element={<AdminDashboard />} />
-          {/* <Route path="/dashboard/teacher" element={<TeacherDashboard />} /> */}
-          {/* <Route path="/dashboard/student" element={<StudentDashboard />} /> */}
+
+          {/* Dashboard Layout — contains Navbar + Sidebar */}
+          <Route path="/dashboard" element={<DashboardLayout />}>
+            <Route path="admin" element={<AdminDashboard />} />
+            <Route path="admin/locations" element={<Location />} />
+
+          </Route>
+
+          {/* Other Routes outside the dashboard layout */}
         </Routes>
       </BrowserRouter>
     </AuthProvider>
   );
-=======
-
-
-  return (
-    <>
-      <div>
-       <h1>EduWheel project </h1>
-      </div>
-    </>
-  )
->>>>>>> 9aa3476b56b3f16b2220759778ec6e5cc1ee9013
 }
 
 export default App;
