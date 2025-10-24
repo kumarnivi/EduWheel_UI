@@ -89,7 +89,7 @@ const Locations = () => {
 
     try {
       const token = localStorage.getItem("token");
-      const { data } = await API.post("/locations", formData, {
+      await API.post("/locations", formData, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success("Location added successfully!");

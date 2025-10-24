@@ -17,10 +17,10 @@ const Sidebar = () => {
       id="logo-sidebar"
       className="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform
                  -translate-x-full sm:translate-x-0
-                 bg-gradient-to-b from-purple-900 via-purple-800 to-black text-white shadow-lg"
+                bg-purple-700 text-white text-white shadow-lg"
       aria-label="Sidebar"
     >
-      <div className="h-full px-3 pb-4 overflow-y-auto">
+      <div className="h-full px-3 pb-4 overflow-y-auto bg-purple-700 text-white ">
         <ul className="space-y-2 font-medium">
           {links.map((link, i) => (
             <li key={i}>
